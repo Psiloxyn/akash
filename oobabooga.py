@@ -1,6 +1,7 @@
 import subprocess
 import torch
 from pathlib import Path
+import os
 
 # If the current directory is not 'text-generation-webui', install the web UI
 if Path.cwd().name != 'text-generation-webui':
@@ -18,7 +19,7 @@ if Path.cwd().name != 'text-generation-webui':
     ui_directory = Path("text-generation-webui")
     os.chdir(ui_directory)
 
-    textgen_requirements = open('requirements.txt').read().splitlines()
+    textgen_requirements = open('extensions/api/requirements.txt').read().splitlines()
     if is_cuda117:
         textgen_requirements = [req.replace('+cu121', '+cu117').replace('+cu122', '+cu117').replace('torch2.1', 'torch2.0') for req in textgen_requirements]
     elif is_cuda118:
