@@ -8,6 +8,8 @@ if Path.cwd().name != 'text-generation-webui':
     print("Installing the webui...")
 
     # Clone the repository
+    subprocess.run(["apt", "upgrade", "-y"])
+    subprocess.run(["apt", "install", "curl", "-y"])
     subprocess.run(["git", "clone", "https://github.com/oobabooga/text-generation-webui"])
 
     torver = torch.__version__
