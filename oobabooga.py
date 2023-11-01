@@ -68,7 +68,7 @@ else:
     output_folder = ""
 
 # Start the web UI
-cmd = f"python3 server.py --share"
+cmd = f"./start_linux.sh --share"
 if output_folder != "":
     cmd += f" --model {output_folder}"
 cmd += f" {command_line_flags}"
