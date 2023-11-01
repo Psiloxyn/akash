@@ -14,6 +14,10 @@ if Path.cwd().name != 'text-generation-webui':
     is_cuda118 = '+cu118' in torver  # 2.1.0+cu118
     is_cuda117 = '+cu117' in torver  # 2.0.1+cu117
 
+    # Change the current working directory to 'text-generation-webui'
+    ui_directory = Path("text-generation-webui")
+    os.chdir(ui_directory)
+
     textgen_requirements = open('requirements.txt').read().splitlines()
     if is_cuda117:
         textgen_requirements = [req.replace('+cu121', '+cu117').replace('+cu122', '+cu117').replace('torch2.1', 'torch2.0') for req in textgen_requirements]
