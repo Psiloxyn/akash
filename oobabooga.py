@@ -61,14 +61,14 @@ if model_url != "":
     branch = branch.strip('"\' ')
     if branch.strip() != '':
         output_folder += f"_{branch}"
-        subprocess.run(["python", "download-model.py", model_url, "--branch", branch])
+        subprocess.run(["python3", "download-model.py", model_url, "--branch", branch])
     else:
-        subprocess.run(["python", "download-model.py", model_url])
+        subprocess.run(["python3", "download-model.py", model_url])
 else:
     output_folder = ""
 
 # Start the web UI
-cmd = f"python server.py --share"
+cmd = f"python3 server.py --share"
 if output_folder != "":
     cmd += f" --model {output_folder}"
 cmd += f" {command_line_flags}"
