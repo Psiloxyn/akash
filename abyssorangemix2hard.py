@@ -10,7 +10,7 @@ pip install -v -U git+https://github.com/facebookresearch/xformers.git@main#egg=
 # Extensions Section
 git clone https://github.com/nolanaatama/microsoftexcel-tunnels /content/microsoftexcel/extensions/microsoftexcel-tunnels
 git clone https://github.com/nolanaatama/microsoftexcel-controlnet /content/microsoftexcel/extensions/microsoftexcel-controlnet
-git clone https://github.com/fkunn1326/openpose-editor /content/microsoftexcel/extensions/openpose-editor
+# git clone https://github.com/fkunn1326/openpose-editor /content/microsoftexcel/extensions/openpose-editor
 git clone https://github.com/nolanaatama/microsoftexcel-3d-open-pose-editor /content/microsoftexcel/extensions/microsoftexcel-3d-open-pose-editor
 git clone https://github.com/nolanaatama/a1111-microsoftexcel-tagcomplete /content/microsoftexcel/extensions/a1111-microsoftexcel-tagcomplete
 git clone https://github.com/nolanaatama/a1111-microsoftexcel-locon /content/microsoftexcel/extensions/a1111-microsoftexcel-locon
