@@ -3,13 +3,13 @@
 # Define a function containing the commands
 execute_commands() {
     # Download memfix.zip
-    curl -Lo memfix.zip https://github.com/nolanaatama/microsoftexcel/raw/main/memfix.zip
+    curl -Lo /content/memfix.zip https://github.com/nolanaatama/microsoftexcel/raw/main/memfix.zip
     unzip /content/memfix.zip
     apt -y update -qq
     env LD_PRELOAD=/content/libtcmalloc_minimal.so.4
 
     # Download microsoftexcel.zip
-    curl -Lo microsoftexcel.zip https://huggingface.co/nolanaatama/colab/resolve/main/microsoftexcel151.zip
+    curl -Lo /content/microsoftexcel.zip https://huggingface.co/nolanaatama/colab/resolve/main/microsoftexcel151.zip
     unzip /content/microsoftexcel.zip
     pip install -v -U git+https://github.com/facebookresearch/xformers.git@main#egg=xformers
 
