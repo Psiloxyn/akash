@@ -58,6 +58,11 @@ subprocess.run(["curl", "-Lo", "/content/microsoftexcel/models/Lora/addmoredetai
 # Web UI tunnel
 # COMMANDLINE_ARGS="--share --disable-safe-unpickle --no-half-vae --xformers --api --enable-insecure-extension --gradio-queue" REQS_FILE="requirements.txt" python launch.py
 # Cloudflare tunnel command...
-export COMMANDLINE_ARGS="--disable-safe-unpickle --no-half-vae --xformers --enable-insecure-extension --gradio-queue --cloudflared"
-export REQS_FILE="requirements.txt"
-python launch.py
+import subprocess
+
+# Setting environment variables for the Python script
+commandline_args = "--disable-safe-unpickle --no-half-vae --xformers --enable-insecure-extension --gradio-queue --cloudflared"
+reqs_file = "requirements.txt"
+
+# Run the Python script with the given environment variables
+subprocess.run(f"COMMANDLINE_ARGS='{commandline_args}' REQS_FILE='{reqs_file}' python launch.py", shell=True)
