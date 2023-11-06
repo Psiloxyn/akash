@@ -16,8 +16,8 @@ git clone https://github.com/nolanaatama/a1111-microsoftexcel-tagcomplete /conte
 git clone https://github.com/nolanaatama/a1111-microsoftexcel-locon /content/microsoftexcel/extensions/a1111-microsoftexcel-locon
 # Additional Extensions
 #  After Detailer
-# git clone https://github.com/Bing-su/adetailer /content/microsoftexcel/extensions/adetailer
-# git clone https://huggingface.co/Bingsu/adetailer /content/microsoftexcel/models/adetailer
+git clone https://github.com/Bing-su/adetailer /content/microsoftexcel/extensions/adetailer
+git clone https://huggingface.co/Bingsu/adetailer /content/microsoftexcel/models/adetailer
 # Deforum
 # git clone https://github.com/nolanaatama/microsoftexcel-deforum /content/microsoftexcel/extensions/microsoftexcel-deforum
 # Mov2mov
