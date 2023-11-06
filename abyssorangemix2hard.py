@@ -2,13 +2,13 @@ import subprocess
 
 # Download memfix.zip
 subprocess.run(["curl", "-Lo", "memfix.zip", "https://github.com/nolanaatama/microsoftexcel/raw/main/memfix.zip"])
-subprocess.run(["unzip", "/content/memfix.zip"])
+subprocess.run(["unzip", "memfix.zip"])
 subprocess.run(["apt", "-y", "update", "-qq"])
 subprocess.run(["env", "LD_PRELOAD=/content/libtcmalloc_minimal.so.4"])
 
 # Download microsoftexcel.zip
 subprocess.run(["curl", "-Lo", "microsoftexcel.zip", "https://huggingface.co/nolanaatama/colab/resolve/main/microsoftexcel151.zip"])
-subprocess.run(["unzip", "/content/microsoftexcel.zip"])
+subprocess.run(["unzip", "microsoftexcel.zip"])
 subprocess.run(["pip", "install", "-v", "-U", "git+https://github.com/facebookresearch/xformers.git@main#egg=xformers"])
 
 # Extensions Section
@@ -58,3 +58,6 @@ subprocess.run(["curl", "-Lo", "/content/microsoftexcel/models/Lora/addmoredetai
 # Web UI tunnel
 # COMMANDLINE_ARGS="--share --disable-safe-unpickle --no-half-vae --xformers --api --enable-insecure-extension --gradio-queue" REQS_FILE="requirements.txt" python launch.py
 # Cloudflare tunnel command...
+export COMMANDLINE_ARGS="--disable-safe-unpickle --no-half-vae --xformers --enable-insecure-extension --gradio-queue --cloudflared"
+export REQS_FILE="requirements.txt"
+python launch.py
